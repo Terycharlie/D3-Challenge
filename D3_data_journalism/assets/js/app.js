@@ -12,7 +12,7 @@ var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select(".chart")
+var svg = d3.select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -63,7 +63,7 @@ console.log(stateData);
     .attr("cx", d => xLinearScale(d.poverty))
     .attr("cy", d => yLinearScale(d.healthcare))
     .attr("r", "16")
-    .attr("fill", "purple")
+    .attr("fill", "blueviolet")
     .attr("opacity", ".75");
 
     var textGroup = chartGroup.selectAll()
@@ -82,7 +82,7 @@ console.log(stateData);
       .attr("class", "tooltip")
       .offset([4, -8])
       .html(function(d) {
-        return (`${d.state}<hr><br>Percentage in Poverty: ${d.poverty}<br>Percentage with Healthcare Access: ${d.healthcare}`);
+        return (`<strong>${d.state}</strong><hr>Percentage in Poverty: ${d.poverty}<br>Percentage with Healthcare Access: ${d.healthcare}`);
       });
 
     // Step 7: Create tooltip in the chart

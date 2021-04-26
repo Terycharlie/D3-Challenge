@@ -30,9 +30,9 @@ body {
   font-size: 16px;
 }
 .tooltip{
-  background-color: crimson;
+  background-color:gray;
   text-align: center;
-  color: azure;
+  color:oldlace;
   border-radius: 25px;
   padding: 10px;
 }
